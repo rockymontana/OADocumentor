@@ -11,8 +11,11 @@ return [
         'components' => base_path('docs/components'),
     ],
     'save' => [
-        'path' => public_path('docs'),
+        'path' => '/docs',
         'filename' => 'openapi.yml',
     ],
-    'redoc' => true
+    'redoc' => [
+        'enable' => true,
+        'endpoint' => 'docs'
+    ]
 ];
