@@ -22,6 +22,10 @@ composer require rockymontana/oa-documentor
 php artisan openapi:generate
 ```
 
+### Playground
+If you want to try it out you can copy the docs-folder in `tests` into your project folder root and then run the generate command.
+
+Then you can fiddle with the documentation and add new path files and components as you wish. When you're done, re-generate the docs and watch it in the browser.
 
 ### Changelog
 
