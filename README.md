@@ -10,10 +10,10 @@ Also - it ships with [Redoc](https://redocly.github.io/redoc/) ([Github](https:/
 
 ## Installation
 
-You can install the package via composer:
+You can soon install the package via composer:
 
 ```bash
-composer require rockymontana/oa-documentor (soon)
+composer require rockymontana/oa-documentor
 ```
 
 ## Usage

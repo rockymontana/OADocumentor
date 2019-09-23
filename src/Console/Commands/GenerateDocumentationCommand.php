@@ -38,10 +38,15 @@ class GenerateDocumentationCommand extends Command
      */
     public function handle()
     {
-        /** @var \OADocumentor\Documentor */
-        $openapi = app()->make('documentor');
-        $openapi->generate();
-        $openapi->save();
+        try {
+            /** @var \OADocumentor\Documentor */
+            $openapi = app()->make('documentor');
+            $openapi->generate()
+                ->validate()
+                ->save();
+        } catch (\OADocumentor\Exceptions\DocumentationValidationException $e) {
+            $this->error($e->getMessage());
+        }
 
         if (!file_exists(config('documentor.save.path') . '/index.html') && config('documentor.redoc') === true) {
             $this->publishRedoc();
@@ -55,6 +60,6 @@ class GenerateDocumentationCommand extends Command
     }
 
     public function publishRedoc() {
-        
+
     }
 }
