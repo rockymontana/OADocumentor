@@ -1,0 +1,26 @@
+{
+    "name": "rockymontana/oa-documentor",
+    "type": "library",
+    "require": {
+        "cebe/php-openapi": "^1.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "OADocumentor\\": "src/"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jonas Erlandsson",
+            "email": "jonas@webbish.se"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "OADocumentor\\Providers\\OADocumentorProvider"
+            ]
+        }
+    }
+}
